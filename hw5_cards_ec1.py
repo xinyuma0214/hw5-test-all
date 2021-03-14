@@ -174,6 +174,21 @@ class Hand:
             self.init_card.append(card)
 
     def remove_card(self,card):
+        '''remove a card from the hand
+
+        for testing, I create object of Hand, assign the init_card to [1,2,3,4,5],
+        when remove card 3, the return will be 3. And I test the init_card list to 
+        approve that function.
+
+        parameter
+        -------------------
+        card: instance
+            a card to remove
+
+        returns
+        -------------------
+        the card, or None if the card was not in the hand
+        '''
         i = 0
         if card in self.init_card:
             for c in self.init_card:
@@ -182,11 +197,25 @@ class Hand:
                 i += 1
         
     def draw(self,deck):
+        '''draw a card
+
+        For testing this function, I create a object of Deck named deck 
+        and a object of Hand([1,2,3,4,5]) named eq3.
+        
+        the len(deck.cards) is 52 at the beginning, and after call the function draw(deck),
+        len(deck.cards) will be 51.
+
+        the len(eq3.init_card) is 5 at the beginning, and after call the function draw(deck),
+        len(eq3.init_card) will be 6.
+        parameter
+        -------------------
+        deck: instance
+            a deck from which to draw
+
+        returns
+        -------------------
+        None
+        '''
         card = deck.deal_card()
         self.add_card(card)
     
-    # def remove_pairs(self):
-    #     l1 = []
-    #     for c in self.init_cards:
-    #         if c not in l1:
-    #             l1.append(c)

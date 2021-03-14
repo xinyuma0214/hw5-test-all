@@ -221,6 +221,9 @@ class Hand:
         list:index_of_dup.
         Third, iterate thorugh the list of index and pop those card. 
 
+        For testing the function, I create a object of Hand with list [1,1,1,2,2,3,4,5].
+        after call this function, the init_card list will be [1,3,4,5]
+
 
         Parameters
         ----------       

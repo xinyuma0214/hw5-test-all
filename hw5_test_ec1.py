@@ -18,12 +18,14 @@ class TestHand(unittest.TestCase):
 
     def testDraw(self):
         deck = hw5_cards_ec1.Deck()
+        self.assertEqual(len(deck.cards),52)
         eq3 = hw5_cards_ec1.Hand([1,2,3,4,5])
         num1 = len(eq3.init_card)
         eq3.draw(deck)
         num2 = len(eq3.init_card)
         self.assertEqual(num1,5)
         self.assertEqual(num2,6)
+        self.assertEqual(len(deck.cards),51)
 
 if __name__=="__main__":
     unittest.main()
