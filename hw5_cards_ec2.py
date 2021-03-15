@@ -136,10 +136,14 @@ class Deck:
         
         self.cards,hand_cards will be modified. Deck size will be reduced
         and hand_cards will be increased.
+        After shuffling the cards, this function will deal the number of cards
+        equals to num_of_cards_per_hand to the first hand, then the second, third,
+        ... ,last hand in turn.
 
         for testing this function, I use eq2 = hw5_cards_ec2.Deck() to
         create a object for Deck. Parameter use (3,-1) 
-        to test all of the card being dealt
+        to test all of the card being dealt to three hands, the number of each hand
+        will be 18,17,17.
 
         Parameters  
         -------------------
